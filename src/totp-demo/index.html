@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="totp-funcs.js"></script>
+    <title>CS2613 TOTP Demo</title>
+</head>
+
+<body>
+  <h1>CS2613 EA2: Time-based One Time Passcode Generator Demo</h1>
+  <h2>Instructions</h2>
+  <p>Provided below is a QR code. You can save the QR code to your computer by right-clicking and selecting "Save Image As..."<br>
+     Follow the instructions in the README.md for the program on how to input the QR code in the program and begin generating codes.<br>
+     Once you start generating codes, come back here to input them to test if the program generates the correct codes.<br><br></p>
+  <img src="totp-data.png" alt="QR code"></img>
+  <h2>Test Your Codes</h2>
+  <p>Enter your code in the field and click "Submit" to verify it.</p>
+  <form id="frm1">
+    Enter your TOTP code: <input type="text" name="totp-code"><br>
+    <input type="button" onclick="totp()" value="Submit"><br>
+  </form>
+  <p id="totp-res"></p>
+</body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script src="totp-gen.js" type="text/javascript"></script>
+    <title>CS2613 TOTP Generator</title>
+</head>
+
+<body>
+    <h1>CS2613 EA2: Time-based One Time Passcode Generator</h1>
+    <h2>Instructions</h2>
+    <p>There are two steps to using this generator. Step 1 must be completed before moving to Step 2 as it will read the QR code needed to generate codes.<br>
+       The QR code as well as the code verifier can be found <a href="https://brennanleblanc.ca/totp-demo" target="_blank">here.</a><br>
+       The recommended configuration is to have this site open on a smartphone and the demo site open on a desktop.</p>
+    <h3>Step 1</h3>
+    <p>This step will read in the QR code. For the best experience, I recommend using a smartphone for this webpage. Otherwise, you will need to save the image (see the demo site) and open the file.<br>
+       To begin this step, click the button below. Once scanned, you may proceed to Step 2.<br>
+       <b>NOTE:</b> Make sure to allow access to the camera. If you are prompted to select a camera, simply select either the "Front Camera" or "Back Camera" option.</p>
+    <div id="reader" width="600px"></div>
+    <button onclick="readQR()">Read QR</button>
+    <p id="qr-result"></p>
+    <h3>Step 2</h3>
+    <p>Please make sure you have completed Step 1 first. You should see a success message if it has been completed.<br><br>
+       Press the button below to generate a code. These codes will change every 30 seconds so if a code no longer works, try generating a new one.</p>
+    <button onclick="startGen()">Generate Code</button>
+    <p id="totp-code"></p>
+</body>
