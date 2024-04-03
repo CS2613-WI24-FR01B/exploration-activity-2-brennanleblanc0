@@ -15,7 +15,7 @@ T
 \frac{T_c - T_0}{x}
 ```
 
-Where T<sub>c</sub> is the current time in seconds since epoch, T<sub>0</sub> is initial time since starting generation, and x is the agreed period between time steps.
+Where T<sub>c</sub> is the current time in seconds since the Unix Epoch, T<sub>0</sub> is initial time since starting generation, and x is the agreed period between time steps.
 In general (and what is described in RFC6238), x is typically 30, meaning a new code is generated every 30 seconds. This is what is used in this program.
 T<sub>0</sub>, in the context of this program, is predetermined and passed along in the QR code to ensure consistency. In the real world, this would be the time at which the QR code was entered into your authenticator app.
 
