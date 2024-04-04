@@ -180,7 +180,7 @@ function hotp(k,t) {
     let hotpVal = retval[offset] + retval[offset+1] + retval[offset+2] + retval[offset+3];
     let numHOTP = 0;
     for (let i = 0; i < 4; i++) {
-        numHOTP += (hotpVal.charCodeAt(i) >= 48 && hotpVal.charCodeAt(i) <= 57 ? hotpVal.charCodeAt(i) - 48 : hotpVal.charCodeAt(i) - 87) * 16**(3-i);
+        numHOTP += (hotpVal.charCodeAt(i) >= 48 && hotpVal.charCodeAt(i) <= 57 ? (hotpVal.charCodeAt(i) - 48) * 16**(3-i) : hotpVal.charCodeAt(i) - 87) * 16**(3-i);
     }
     return numHOTP;
 }
